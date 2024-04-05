@@ -1,15 +1,10 @@
-import { mapFolderData } from "folder/util-map";
-import { useAsync } from "sharing/util";
-import { axiosInstance } from "sharing/util";
+import { SampleFolderRawData } from "@/src/folder/type";
+import { mapFolderData } from "@/src/folder/util-map";
+import { useAsync } from "@/src/sharing/util";
+import { axiosInstance } from "@/src/sharing/util";
 
-interface UseGetFolderResponse {
-  loading: boolean;
-  error: any;
-  data: any;
-}
-
-export const useGetFolder = (): UseGetFolderResponse => {
-  const getFolder = () => axiosInstance.get("sample/folder");
+export const useGetFolder = () => {
+  const getFolder = () => axiosInstance.get<{ folder: SampleFolderRawData }>("sample/folder");
   const { loading, error, data } = useAsync(getFolder);
 
   const folderData = mapFolderData(data?.folder);

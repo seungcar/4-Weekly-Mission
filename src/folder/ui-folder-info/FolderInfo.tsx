@@ -3,11 +3,11 @@ import classNames from "classnames/bind";
 
 const cx = classNames.bind(styles);
 
-interface FolderInfoProps {
+type FolderInfoProps = {
   profileImage: string;
   ownerName: string;
   folderName: string;
-}
+};
 
 export const FolderInfo = ({ profileImage, ownerName, folderName }: FolderInfoProps) => {
   return (
