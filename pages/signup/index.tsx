@@ -3,24 +3,24 @@ import { SignHeader } from "";
 import { SignForm } from "";
 import { SignFooter } from "";
 
-const SignInPage = () => {
+const SignUpPage = () => {
   return (
     <>
       <SignLayout>
         <SignHeader
-          message="회원이 아니신가요?"
-          linktext="회원 가입하기"
+          message="이미 회원이신가요?"
+          linktext="로그인 하기"
           linkhref="나중에 route로 구현"
         />
         <SignForm
-          buttontext="로그인"
+          buttontext="회원가입"
         />
       <SignFooter
-        socialtext="소셜 로그인"
+        socialtext="다른 방식으로 가입하기"
       />
       </SignLayout>
     </>
   );
 };
 
-export default SignInPage;
+export default SignUpPage;
