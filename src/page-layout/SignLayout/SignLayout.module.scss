@@ -2,6 +2,8 @@
 
 .container {
   display: flex;
-  justify-content: center;
-  background-color: #F0F6FF;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 23.8rem 0;
 }

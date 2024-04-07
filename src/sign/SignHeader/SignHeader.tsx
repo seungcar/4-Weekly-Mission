@@ -13,7 +13,7 @@ export const SignHeader: React.FC<SignHeaderProps> = ({
   linktext,
 }) => {
   return (
-    <div className={styles.container}>
+    <div>
       <a href="">
         <LinkbraryLogo alt="Linkbrary Logo" className={styles.logo} />
       </a>

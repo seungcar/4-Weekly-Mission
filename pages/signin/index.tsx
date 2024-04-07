@@ -1,6 +1,6 @@
 import { SignLayout } from "@/src/page-layout/SignLayout";
 import { SignHeader } from "@/src/sign/SignHeader";
-// import { SignForm } from "";
+import { SignForm } from "@/src/sign/SignForm";
 // import { SignFooter } from "";
 
 const SignInPage = () => {
@@ -13,11 +13,11 @@ const SignInPage = () => {
           // linkhref=
         />
       }
-      //   form={
-      //   <SignForm
-      //     buttontext="로그인"
-      //   />
-      //   }
+        form={
+        <SignForm
+          buttontext="로그인"
+        />
+        }
       //   footer={
       // <SignFooter
       //   socialtext="소셜 로그인"
