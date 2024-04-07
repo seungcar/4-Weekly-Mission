@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import styles from "./SignForm.module.scss";
 
 interface SignFormProps {
@@ -8,15 +8,19 @@ interface SignFormProps {
 export const SignForm: React.FC<SignFormProps> = ({ buttontext }) => {
   return (
     <form>
-      <div>
+      <div className={styles.inputcontainer}>
         <label htmlFor="email">이메일</label>
+        <div className={styles.height12box} />
         <input type="email" id="email" />
-      </div>
-      <div>
+        <div className={styles.height12box} />
+        <div className={styles.height12box} />
         <label htmlFor="password">비밀번호</label>
+        <div className={styles.height12box} />
         <input type="password" id="password" />
       </div>
-      <button type="submit">{buttontext}</button>
+      <button className={styles.button} type="submit">
+        {buttontext}
+      </button>
     </form>
   );
 };
