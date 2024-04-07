@@ -1,16 +1,18 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from "react";
 import styles from "./SignLayout.module.scss";
 
-type SignLayoutProps = {
-  children: ReactNode;
-};
+interface SignLayoutProps {
+  header: ReactNode;
+  form: ReactNode;
+  footer: ReactNode;
+}
 
-const SignLayout = ({ children }: SignLayoutProps) => {
+export const SignLayout: React.FC<SignLayoutProps> = ({ header, form, footer }) => {
   return (
-    <div className="container">
-      {children}
+    <div className={styles.container}>
+      {header}
+      {form}
+      {footer}
     </div>
   );
 };
-
-export default SignLayout;

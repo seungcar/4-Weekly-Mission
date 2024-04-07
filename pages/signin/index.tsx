@@ -1,25 +1,30 @@
-import { SignLayout } from "@/src/page-layout/Sign";
-import { SignHeader } from "";
-import { SignForm } from "";
-import { SignFooter } from "";
+import { SignLayout } from "@/src/page-layout/SignLayout";
+import { SignHeader } from "@/src/sign/SignHeader";
+// import { SignForm } from "";
+// import { SignFooter } from "";
 
 const SignInPage = () => {
   return (
-    <>
-      <SignLayout>
+    <SignLayout
+      header={
         <SignHeader
           message="회원이 아니신가요?"
           linktext="회원 가입하기"
-          linkhref="나중에 route로 구현"
+          // linkhref=
         />
-        <SignForm
-          buttontext="로그인"
-        />
-      <SignFooter
-        socialtext="소셜 로그인"
-      />
-      </SignLayout>
-    </>
+      }
+      //   form={
+      //   <SignForm
+      //     buttontext="로그인"
+      //   />
+      //   }
+      //   footer={
+      // <SignFooter
+      //   socialtext="소셜 로그인"
+      // />
+      // </SignLayout>
+      // }
+    />
   );
 };
 
