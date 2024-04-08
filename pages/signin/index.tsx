@@ -10,7 +10,7 @@ const SignInPage = () => {
         <SignHeader
           message="회원이 아니신가요?"
           linktext="회원 가입하기"
-          // linkhref=
+          linkhref="/signup"
         />
       }
         form={

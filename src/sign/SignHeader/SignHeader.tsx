@@ -5,16 +5,17 @@ import LinkbraryLogo from "public/images/linkbrary.svg";
 interface SignHeaderProps {
   message: string;
   linktext: string;
-  // linkhref: ;
+  linkhref: string;
 }
 
 export const SignHeader: React.FC<SignHeaderProps> = ({
   message,
   linktext,
+  linkhref,
 }) => {
   return (
     <div>
-      <a href="">
+      <a href={linkhref}>
         <LinkbraryLogo alt="Linkbrary Logo" className={styles.logo} />
       </a>
       <div className={styles.signmessage}>
