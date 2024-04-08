@@ -10,9 +10,9 @@
   height: 1.2rem;
 }
 
-.inputcontainer input {
+.input {
   border-radius: 0.8rem;
-  border: 0.1rem solid #6d6afe;
+  border: 0.1rem solid #CCD5E3;
   width: 40rem;
   padding: 1.8rem 1.5rem;
   font-size: 1.6rem;
@@ -33,4 +33,9 @@
   font-weight: 600;
   width: 40rem;
   text-align: center;
+}
+
+.error {
+  border-color: #FF5B56;
+  color: #FF5B56;
 }
