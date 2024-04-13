@@ -11,7 +11,6 @@ import { InputModal } from "@/src/sharing/ui-input-modal";
 import { AlertModal } from "@/src/sharing/ui-alert-modal";
 import { Folder, SelectedFolderId } from "@/src/folder/type";
 import { copyToClipboard, useKakaoSdk } from "@/src/sharing/util";
-import { useRouter } from "next/router";
 
 const cx = classNames.bind(styles);
 
@@ -25,7 +24,6 @@ export const FolderToolBar = ({ folders, selectedFolderId, onFolderClick }: Fold
   const { shareKakao } = useKakaoSdk();
   const [currentModal, setCurrentModal] = useState<string | null>(null);
   const [inputValue, setInputValue] = useState<string>("");
-  const router = useRouter();
 
   const folderName =
     ALL_LINKS_ID === selectedFolderId

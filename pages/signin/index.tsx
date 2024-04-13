@@ -1,7 +1,8 @@
+import { SignInForm } from "@/src/auth/feature-sign-in-form";
+import { Oauth } from "@/src/auth/feature-oauth";
+import { SignHeader } from "@/src/auth/ui-sign-header";
 import { SignLayout } from "@/src/page-layout/SignLayout";
-import { SignHeader } from "@/src/sign/SignHeader";
-import { SignForm } from "@/src/sign/SignForm";
-import { SignFooter } from "@/src/sign/SignFooter";
+import { ROUTE } from "@/src/sharing/util";
 
 const SignInPage = () => {
   return (
@@ -9,20 +10,11 @@ const SignInPage = () => {
       header={
         <SignHeader
           message="회원이 아니신가요?"
-          linktext="회원 가입하기"
-          linkhref="/signup"
+          link={{ text: "회원 가입하기", href: ROUTE.회원가입 }}
         />
       }
-        form={
-        <SignForm
-          buttontext="로그인"
-        />
-        }
-        footer={
-      <SignFooter
-        socialtext="소셜 로그인"
-      />
-      }
+      form={<SignInForm />}
+      oauth={<Oauth description="소셜 로그인" />}
     />
   );
 };

@@ -1,18 +1,23 @@
 import { ReactNode } from "react";
 import styles from "./SignLayout.module.scss";
+import classNames from "classnames/bind";
 
-interface SignLayoutProps {
+const cx = classNames.bind(styles);
+
+type SignInLayoutProps = {
   header: ReactNode;
   form: ReactNode;
-  footer: ReactNode;
-}
+  oauth: ReactNode;
+};
 
-export const SignLayout: React.FC<SignLayoutProps> = ({ header, form, footer }) => {
+export const SignLayout = ({ header, form, oauth }: SignInLayoutProps) => {
   return (
-    <div className={styles.container}>
-      {header}
-      {form}
-      {footer}
+    <div className={cx("container")}>
+      <div className={cx("items")}>
+        {header}
+        {form}
+        {oauth}
+      </div>
     </div>
   );
 };
